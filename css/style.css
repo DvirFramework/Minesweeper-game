@@ -1,0 +1,79 @@
+
+h1 {
+    font-size: 28px; 
+    color: #333;
+    text-align: center; 
+    margin-top: 20px; 
+  }
+
+.board-container {
+    margin: auto;
+  }
+  
+  .cell {
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+  }
+  table {
+    height: 300px;
+    width: 300px;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightsteelblue;
+    margin: 0 auto;
+    
+}
+
+td.defult-cell{
+    background-color: #ddd;
+
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+.mine{
+    background-color: #ddd;
+}
+
+td.reveal{
+    opacity: 20%;
+
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+td.mine {
+    background-color: red;
+    color: white;
+}
+
+
+.level-buttons {
+  text-align: center;
+  font-size: 16px;
+  margin: 30px;
+}
+
+
+
+
+
+ 

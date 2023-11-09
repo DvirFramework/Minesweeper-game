@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Minesweeper game</title>
+</head>
+
+<body onload="onInit()">
+    <h1>Minesweeper Game </h1>
+
+    <div id="lives-counter">Lives Left: 3</div>
+
+    <button onclick="useHint()">Use Hint</button>
+    <span id="hints">Hints: <span id="hint-count">3</span></span>
+
+    <div id="victory" style="display: none;">
+        <h3>Congratulations you won!</h3>
+    </div>
+
+    <div id="lost" style="display: none;">
+        <h3>you lost!</h3>
+    </div>
+
+    <div id="level-selection" class="level-buttons">
+        <button onclick="onLevelSelected('beginner')">Beginner (4 * 4)</button>
+        <button onclick="onLevelSelected('medium')">Medium (8 * 8 )</button>
+        <button onclick="onLevelSelected('expert')">Expert (12 * 12)</button>
+    </div>
+
+    <table class="board-container">
+        <tbody class="game-board"></tbody>
+    </table>
+
+    <button id="ResetGame" class="button" style="display: none;" onclick="onInit()">play Again</button>
+
+    <footer>
+        <p> Created By Dvir Dor</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/util.js"></script>
+</body>
+
+</html>
