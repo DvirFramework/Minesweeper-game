@@ -171,8 +171,6 @@ function onCellClicked(elCell) {
     var j = +parts[1]
     var cell = gBoard[i][j]
 
-    console.log('cell: ' +cell.isShown)
-
     if (cell.isShown) return
 
     if(cell.isMarked) gGame.markedCount--
@@ -186,7 +184,6 @@ function onCellClicked(elCell) {
         elCell.style.backgroundColor = 'red'
         gGame.isOn=false
         gGame.victory = false
-        console.log(gGame.isOn)
         checkGameOver()
         return
     } 
@@ -198,7 +195,7 @@ function onCellClicked(elCell) {
         
 
         //Call the expandShown function to reveal neighboring cells
-        expandShown(gBoard, elCell, i, j)
+        expandShown(gBoard,i, j)
     }
     if(cell.minesAroundCount>0){
         cell.isShown = true
@@ -239,13 +236,11 @@ function onCellMarked(elCell) {
 function checkGameOver() {
     //condition for victory
     if(gGame.markedCount===gLevel.MINES && gGame.shownCount === gLevel.SIZE**2-gLevel.MINES) {
-        console.log('wining');
         gGame.isOn=false
         gGame.victory =true
     }
 
     if(!gGame.isOn && gGame.victory){
-        console.log('victory');
         var elBtn = document.getElementById("ResetGame")
         elBtn.textContent = "play Again"
         elBtn.style.display = "block"
@@ -256,7 +251,6 @@ function checkGameOver() {
 
     //condition for losing
     if(!gGame.isOn && !gGame.victory){
-        console.log('lose');
         var elBtn = document.getElementById("ResetGame")
         elBtn.textContent = "play Again"
         elBtn.style.display = "block"
@@ -269,8 +263,7 @@ function checkGameOver() {
             
 // function expandShown(board, elCell, i, j) {
 
-function expandShown(board, elCell, rowIdx, colIdx) {
-    console.log(elCell)
+function expandShown(board, rowIdx, colIdx) {
     for (var i = rowIdx - 1; i <= rowIdx + 1; i++) {
         for (var j = colIdx - 1; j <= colIdx + 1; j++) {
             if (i < 0 || i >= board.length || j < 0 || j >= board[i].length) continue;

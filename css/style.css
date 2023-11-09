@@ -60,16 +60,23 @@ footer {
 }
 
 
-td.mine {
+/* td.mine {
     background-color: red;
     color: white;
 }
-
+ */
 
 .level-buttons {
   text-align: center;
   font-size: 16px;
   margin: 30px;
+}
+
+.game-levels{
+  font-size: 16px; 
+  color: #333;
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 
