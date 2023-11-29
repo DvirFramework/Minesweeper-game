@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: lightgray;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-footer {
+    max-width: 1200px;
+    padding: 20px;
+    background-color: gray;
+    align-items: center;
+}

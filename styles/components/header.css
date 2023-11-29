@@ -1,0 +1,30 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.main-nav {
+    margin-top: 10px;
+}
+
+.main-nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav-list li {
+    margin-right: 20px;
+}
+
+.main-nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

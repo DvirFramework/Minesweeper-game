@@ -1,0 +1,48 @@
+.meme-editor {
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.meme-editor canvas {
+    border: 2px solid #333;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btns-editor {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btns-editor input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.btns-editor a,
+.btns-editor button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btns-editor input[type="color"] {
+    margin-top: 10px;
+}
+
+.btns-editor button {
+    cursor: pointer;
+    border: none;
+}
+
+.btns-editor button:hover {
+    background-color: #2980b9;
+}

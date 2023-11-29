@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Minesweeper game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
-<body onload="onInit()">
-    <h1>Minesweeper Game </h1>
-
-    <div id="lives-counter">Lives Left: 3</div>
-
-    <button onclick="useHint()">Use Hint</button>
-    <span id="hints">Hints: <span id="hint-count">3</span></span>
-
-    <div id="victory" style="display: none;">
-        <h3>Congratulations you won!</h3>
+<body>
+  <header class="main-header flex space-between align-center">
+    <div class="logo">Memegen</div>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Memes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+  </header>
+  <section class="image-gallery">
+    <img src="img/1.jpg" alt="" data-img-id="1">
+    <img src="img/2.jpg" alt="" data-img-id="2">
+    <img src="img/3.jpg" alt="" data-img-id="3"> 
+    <img src="img/4.jpg" alt="" data-img-id="4">
+    <img src="img/5.jpg" alt="" data-img-id="5">
+    <img src="img/6.jpg" alt="" data-img-id="6">
+    <img src="img/7.jpg" alt="" data-img-id="7">
+    <img src="img/8.jpg" alt="" data-img-id="8"> 
+    <img src="img/9.jpg" alt="" data-img-id="9">
+    <img src="img/10.jpg" alt="" data-img-id="10">
+  </section>
+  <section class="meme-editor">
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div class="btns-editor">
+      <input type="text" id="textInput" placeholder="Enter text">
+        <a id="downloadLink" download="meme.png">Download Meme</a>
+        <input type="color" id="colorPicker" value="#ffffff" title="Choose Text Color">
+       <button id="increaseFontSize" title="Increase Font Size">+</button>
+       <button id="decreaseFontSize" title="Decrease Font Size">-</button>
+       <button id="addLineBtn" title="Add Line">Add Line</button>
+       <button id="switchLineBtn" title="Switch Line">Switch Line</button>
+       <select id="fontFamilySelect" onchange="changeFontFamily()">
+        <option value="Impact">Impact</option>
+    </select>
+    <input type="number" id="fontSizeInput" value="20" onchange="changeFontSize()">
+    <button onclick="shareToFacebook()">Share to Facebook</button>
     </div>
+  </section>
+  <section class="memes"></section>
 
-    <div id="lost" style="display: none;">
-        <h3>you lost!</h3>
-    </div>
+  <footer class="main-footer">
+    <h3>Created By Dvir.D 2023</h3>
+  </footer>
 
-    <div id="level-selection" class="level-buttons">
-        <button onclick="onLevelSelected('beginner')">Beginner (4 * 4)</button>
-        <button onclick="onLevelSelected('medium')">Medium (8 * 8 )</button>
-        <button onclick="onLevelSelected('expert')">Expert (12 * 12)</button>
-    </div>
-
-    <table class="board-container">
-        <tbody class="game-board"></tbody>
-    </table>
-
-    <button id="ResetGame" class="button" style="display: none;" onclick="onInit()">play Again</button>
-    <div class = "game-levels">
-        <p>o Beginner (4 * 4 with 2 MINES) </p>
-        <p>o Medium (8 * 8 with 14 MINES) </p>  
-        <p>o Expert (12 * 12 with 32 MINES)</p>
-    </div>
-   
-    <footer>
-        <p> Created By Dvir Dor</p>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/util.js"></script>
+  <script src="js/meme.service.js"></script>
+  <script src="js/meme.controller.js"></script>
+  <script src="js/gallery.controller.js"></script>
+  
 </body>
-
 </html>
